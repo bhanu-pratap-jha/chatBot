@@ -1,6 +1,3 @@
-Here’s a more structured and visually appealing version of your `README.md` file for your GitHub project:
-
----
 
 # AI Chatbot Application 🚀
 
