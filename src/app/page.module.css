@@ -1,0 +1,132 @@
+/* Container Styles */
+.container {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+/* Chatbox Styles */
+.chatBox {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: auto;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chatBox::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chatBox::-webkit-scrollbar-thumb {
+  background-color: #2575fc;
+  border-radius: 20px;
+}
+
+.chatBox::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Message Styles */
+.user {
+  background-color: #4caf50;
+  color: white;
+  align-self: flex-end;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.bot {
+  background-color: #f0f0f0;
+  color: #333;
+  align-self: flex-start;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* Input Box Styles */
+.inputBox {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.inputBox input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #2575fc;
+  border-radius: 25px;
+  outline: none;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.inputBox input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+}
+
+.inputBox button {
+  padding: 10px 20px;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.inputBox button:hover {
+  background-color: #6a11cb;
+  transform: translateY(-2px);
+}
+
+.h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .chatBox {
+    max-width: 100%;
+  }
+
+  .inputBox {
+    flex-direction: column;
+  }
+
+  .inputBox input,
+  .inputBox button {
+    width: 100%;
+  }
+}
