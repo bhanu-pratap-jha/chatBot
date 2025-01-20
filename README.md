@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+First install:
+  npm install axios
+  npm install pg
 First, run the development server:
 
 ```bash
