@@ -12,10 +12,11 @@
   overflow: hidden;
 }
 
-/* Title */
+/* Heading */
 .h1 {
-  font-size: 40px;
+  font-size: 36px;
   margin-bottom: 20px;
+  text-align: center;
   font-weight: 700;
   background: linear-gradient(to right, #ffafbd, #ffc3a0);
   -webkit-background-clip: text;
@@ -27,26 +28,27 @@
   width: 100%;
   max-width: 600px;
   height: 60vh;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
   border-radius: 16px;
   padding: 20px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  scroll-behavior: smooth;
 }
 
 .chatBox::-webkit-scrollbar {
   width: 6px;
 }
+
 .chatBox::-webkit-scrollbar-thumb {
-  background: #6a11cb;
-  border-radius: 10px;
+  background-color: #6a11cb;
+  border-radius: 20px;
 }
+
 .chatBox::-webkit-scrollbar-track {
   background: transparent;
 }
@@ -59,8 +61,8 @@
   padding: 12px 16px;
   border-radius: 20px 20px 0 20px;
   max-width: 75%;
+  word-wrap: break-word;
   font-size: 15px;
-  word-break: break-word;
   box-shadow: 0 4px 10px rgba(0, 114, 255, 0.4);
 }
 
@@ -71,8 +73,8 @@
   padding: 12px 16px;
   border-radius: 20px 20px 20px 0;
   max-width: 75%;
+  word-wrap: break-word;
   font-size: 15px;
-  word-break: break-word;
   box-shadow: 0 4px 10px rgba(252, 182, 159, 0.4);
 }
 
@@ -98,15 +100,17 @@
   color: #fff;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-}
-
-.inputBox input::placeholder {
-  color: #ddd;
+  border: 2px solid rgba(255, 190, 160, 0.3);
 }
 
 .inputBox input:focus {
-  box-shadow: 0 0 10px #6a11cb;
+  box-shadow: 0 0 10px rgba(255, 190, 160, 0.6);
+  border-color: rgba(255, 190, 160, 0.8);
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.inputBox input::placeholder {
+  color: #e0d9d9;
 }
 
 .inputBox button {
@@ -117,12 +121,13 @@
   border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .inputBox button:hover {
+  background-color: #6a11cb;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(38, 132, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 190, 160, 0.4);
 }
 
 /* Responsive Design */
@@ -133,6 +138,7 @@
 
   .chatBox {
     height: 55vh;
+    max-width: 100%;
   }
 
   .inputBox {
